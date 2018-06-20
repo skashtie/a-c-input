@@ -1,0 +1,13 @@
+{
+  "data":[
+  {
+    "id": "11",
+    "entity": {
+      "name": "this is json name",
+      "image": "/assets/smiley.jpg",
+      "myField":
+        "just my json field ",
+      "position": [0.575958653158129, 0.610865238198015, 0]
+    }
+  }
+]}

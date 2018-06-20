@@ -1,0 +1,85 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID_1": "1", "OBJECTID": "1", "Name": "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg", "Name_En": "Civil & Environmental Eng.", "ELEVATION": "219.261" }, "geometry": { "type": "Point", "coordinates": [ 35.022285, 32.779062, 218.789993 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "2", "OBJECTID": "3", "Name": "בריכה חדר כושר ומגרשי ספור", "Name_En": "Sports Facility", "ELEVATION": "201.643" }, "geometry": { "type": "Point", "coordinates": [ 35.019047, 32.779394, 201.643005 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "3", "OBJECTID": "5", "Name": "לימודי חוץ", "Name_En": "External Studies", "ELEVATION": "259.272" }, "geometry": { "type": "Point", "coordinates": [ 35.020023, 32.773313, 259.272003 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "4", "OBJECTID": "6", "Name": "לב הקמפוס", "Name_En": "Campus Center", "ELEVATION": "199.36" }, "geometry": { "type": "Point", "coordinates": [ 35.022391, 32.777345, 199.360001 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "5", "OBJECTID": "8", "Name": "הגן האקולוגי", "Name_En": "Ecological Garden", "ELEVATION": "166.468" }, "geometry": { "type": "Point", "coordinates": [ 35.024606, 32.778186, 166.468002 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "6", "OBJECTID": "9", "Name": "טיילת זילוני", "Name_En": "Zielony Promenade", "ELEVATION": "196.067" }, "geometry": { "type": "Point", "coordinates": [ 35.023467, 32.776652, 196.067001 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "7", "OBJECTID": "10", "Name": "פארק קיסלק", "Name_En": "Kislak Park", "ELEVATION": "205.186" }, "geometry": { "type": "Point", "coordinates": [ 35.024126, 32.775293, 205.186005 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "8", "OBJECTID": "13", "Name": "מעונות בור", "Name_En": "ATS Village I", "ELEVATION": "238.715" }, "geometry": { "type": "Point", "coordinates": [35.016526, 32.777574, 244.031006 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "9", "OBJECTID": "14", "Name": "מעונות נוה אמריקה ATS", "Name_En": "ATS Village II", "ELEVATION": "235.483" }, "geometry": { "type": "Point", "coordinates": [ 35.015677, 32.777326, 235.483002 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "10", "OBJECTID": "15", "Name": "מעונות הסנט", "Name_En": "ATS Village II", "ELEVATION": "236.495" }, "geometry": { "type": "Point", "coordinates": [ 35.020043, 32.776240, 242.639008 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "11", "OBJECTID": "16", "Name": "מעונות ריבקין", "Name_En": "Rifkin Village", "ELEVATION": "213.848" }, "geometry": { "type": "Point", "coordinates": [ 35.018473, 32.778288, 219.936996 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "12", "OBJECTID": "17", "Name": "מעונות מזרח", "Name_En": "Eastern Dormitory Village", "ELEVATION": "193.235" }, "geometry": { "type": "Point", "coordinates": [ 35.028133, 32.773099, 218.042999 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "13", "OBJECTID": "18", "Name": "בית הסטודנט", "Name_En": "Student Union Building", "ELEVATION": "214.422" }, "geometry": { "type": "Point", "coordinates": [ 35.022789, 32.776448, 214.421997 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "14", "OBJECTID": "20", "Name": "אמפיתאטרון על שם קלנר", "Name_En": "Dorothy & Martin Kellner Amphitheater", "ELEVATION": "192.809" }, "geometry": { "type": "Point", "coordinates": [ 35.023077, 32.777510, 200.281998 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "15", "OBJECTID": "21", "Name": "מעונות סגל זוטר", "Name_En": "Junior Staff Housing", "ELEVATION": "187.813" }, "geometry": { "type": "Point", "coordinates": [  35.020892, 32.780552, 188.108002] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "16", "OBJECTID": "22", "Name": "מעונות קנדה", "Name_En": "Canada Village", "ELEVATION": "162.03" }, "geometry": { "type": "Point", "coordinates": [ 35.022179, 32.780737, 172.542007 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "17", "OBJECTID": "23", "Name": "מעונות גרוס", "Name_En": "Gruss Dormitory", "ELEVATION": "170.355" }, "geometry": { "type": "Point", "coordinates": [ 35.020244, 32.781349, 170.354996 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "18", "OBJECTID": "24", "Name": "גוטוורט פארק", "Name_En": "Gutwirth Science Based Industry Park", "ELEVATION": "134.712" }, "geometry": { "type": "Point", "coordinates": [ 35.028091, 32.778583, 134.712006 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "19", "OBJECTID": "25", "Name": "כפר משתלמים", "Name_En": "Zielony Graduate Student Village", "ELEVATION": "268.558" }, "geometry": { "type": "Point", "coordinates": [ 35.016108, 32.774060, 268.558014 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "20", "OBJECTID": "28", "Name": "מעונות דה זור", "Name_En": "Dejur Dormitories", "ELEVATION": "231.589" }, "geometry": { "type": "Point", "coordinates": [ 35.019131, 32.776790, 239.500000 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "21", "OBJECTID": "30", "Name": "כפר הסמכה", "Name_En": "Undergraduate Student Village", "ELEVATION": "232.891" }, "geometry": { "type": "Point", "coordinates": [ 35.018112, 32.777319, 232.891006 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "22", "OBJECTID": "31", "Name": "גן לוקיי", "Name_En": "Lokey Park", "ELEVATION": "225.531" }, "geometry": { "type": "Point", "coordinates": [ 35.021235, 32.775844, 225.531006 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "23", "OBJECTID": "32", "Name": "מעונות מזרח הלר", "Name_En": "Eastern Village", "ELEVATION": "180.948" }, "geometry": { "type": "Point", "coordinates": [  35.027351, 32.773931, 195.468002 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "24", "OBJECTID": "0", "Name": "הנדסת אווירונוטיקה וחלל", "Name_En": "Aeronautical  Eng.", "ELEVATION": "236.671" }, "geometry": { "type": "Point", "coordinates": [ 35.021810, 32.773625, 235.947998 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "25", "OBJECTID": "0", "Name": "הנדסת מכונות", "Name_En": "Mechanical Eng.", "ELEVATION": "221.419" }, "geometry": { "type": "Point", "coordinates": [ 35.022358, 32.774146, 245.085999 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "26", "OBJECTID": "0", "Name": "הנדסת תעשיה וניהול", "Name_En": "Industrial Eng. and management", "ELEVATION": "230.729" }, "geometry": { "type": "Point", "coordinates": [ 35.024155, 32.774115, 232.421005 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "27", "OBJECTID": "0", "Name": "הנדסת חשמל", "Name_En": "Electrical Eng.", "ELEVATION": "198.081" }, "geometry": { "type": "Point", "coordinates": [ 35.024558, 32.776289, 198.080994 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "28", "OBJECTID": "0", "Name": "פיזיקה", "Name_En": "Physics", "ELEVATION": "198.319" }, "geometry": { "type": "Point", "coordinates": [ 35.025235, 32.776690, 198.319000 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "29", "OBJECTID": "0", "Name": "כימיה", "Name_En": "Chemistry", "ELEVATION": "186.642" }, "geometry": { "type": "Point", "coordinates": [ 35.025968, 32.777550, 186.641998 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "30", "OBJECTID": "0", "Name": "הנדסת ביוטכנולוגיה ומזון", "Name_En": "Biotechnology and Food Eng.", "ELEVATION": "170.371" }, "geometry": { "type": "Point", "coordinates": [ 35.026781, 32.777828, 170.371002 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "31", "OBJECTID": "0", "Name": "הנדסה כימית", "Name_En": "Chemical Eng.", "ELEVATION": "160.703" }, "geometry": { "type": "Point", "coordinates": [ 35.027390, 32.778030, 160.703003 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "32", "OBJECTID": "0", "Name": "ארכיטקטורה ובינוי ערים", "Name_En": "Architecture and Town Planning", "ELEVATION": "209.754" }, "geometry": { "type": "Point", "coordinates": [ 35.022476, 32.777975, 209.753998 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "33", "OBJECTID": "0", "Name": "מתמטיקה", "Name_En": "Mathematics", "ELEVATION": "219.723" }, "geometry": { "type": "Point", "coordinates": [ 35.023064, 32.778119, 219.723007 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "34", "OBJECTID": "0", "Name": "הנדסה ביו רפואית", "Name_En": "Biomedical Eng.", "ELEVATION": "186.978" }, "geometry": { "type": "Point", "coordinates": [ 35.026402, 32.775251, 186.977997 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "35", "OBJECTID": "0", "Name": "מדעי המחשב", "Name_En": "Computer Science", "ELEVATION": "209.723" }, "geometry": { "type": "Point", "coordinates": [ 35.021354, 32.777692, 238.367996] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "36", "OBJECTID": "0", "Name": "המחלקה ללימודים הומניסטים", "Name_En": "Humanities and Arts", "ELEVATION": "190.235" }, "geometry": { "type": "Point", "coordinates": [ 35.024963, 32.777492, 190.235001 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "37", "OBJECTID": "0", "Name": "ביולוגיה", "Name_En": "Biology", "ELEVATION": "185.016" }, "geometry": { "type": "Point", "coordinates": [ 35.026726, 32.776864, 185.016006 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "38", "OBJECTID": "0", "Name": "מדע והנדסה של חומרים", "Name_En": "Materials Science and Eng.", "ELEVATION": "190.872" }, "geometry": { "type": "Point", "coordinates": [ 35.025526, 32.775557, 214.500000 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "39", "OBJECTID": "0", "Name": "חינוך למדע וטכנולוגיה", "Name_En": "Education in Science & Technology", "ELEVATION": "175.58" }, "geometry": { "type": "Point", "coordinates": [ 35.026827, 32.776558, 175.580002 ] } }
+,
+{ "type": "Feature", "properties": { "OBJECTID_1": "40", "OBJECTID": "0", "Name": "בית ספר להנדסאים", "Name_En": "Technicians School", "ELEVATION": "162.194" }, "geometry": { "type": "Point", "coordinates": [ 35.028985, 32.776261, 162.194000 ] } }
+
+]
+}
