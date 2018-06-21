@@ -1,7 +1,7 @@
 {
 "type": "FeatureCollection",
 "features": [
-{ "type": "Feature", "properties": { "OBJECTID_1": "1", "OBJECTID": "1", "Name": "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg", "Name_En": "Civil & Environmental Eng.", "ELEVATION": "219.261" }, "geometry": { "type": "Point", "coordinates": [ 35.022285, 32.779062, 218.789993 ] } }
+{ "type": "Feature", "properties": { "OBJECTID_1": "1", "OBJECTID": "1", "Name": "הנדסה אזרחית וסביבתית", "Name_En": "Civil & Environmental Eng.", "ELEVATION": "219.261" }, "geometry": { "type": "Point", "coordinates": [ 35.022285, 32.779062, 218.789993 ] } }
 ,
 { "type": "Feature", "properties": { "OBJECTID_1": "2", "OBJECTID": "3", "Name": "בריכה חדר כושר ומגרשי ספור", "Name_En": "Sports Facility", "ELEVATION": "201.643" }, "geometry": { "type": "Point", "coordinates": [ 35.019047, 32.779394, 201.643005 ] } }
 ,
