@@ -115,8 +115,8 @@ export class MapComponent implements OnInit {
     // this.isShown = true;
 
     // this.getData();
-    // this.getJsonFromService();
-    this.getSimplexJsonFromService();
+    this.getJsonFromService();
+    // this.getSimplexJsonFromService();
   }
 
   getData() {
@@ -140,6 +140,9 @@ export class MapComponent implements OnInit {
         res => {
           console.log(' res = ' + JSON.stringify(res));
           res.data.map(item => {
+            /**work using  item.entity.position in spite of the compiler warnings!!!
+             * no warnings on chrom browser
+             */
             item.entity.position = Cesium.Cartesian3.fromRadians(
               item.entity.position[0],
               item.entity.position[1],
@@ -147,16 +150,16 @@ export class MapComponent implements OnInit {
             );
 
             item.actionType = ActionType.ADD_UPDATE;
-          console.log(' res after = ' + JSON.stringify(res));
+            console.log(' res after = ' + JSON.stringify(res));
 
             return item;
           });
-    // this.planes$ = Observable.from(this.dataArray);
+          this.planes$ = Observable.from(this.dataArray);
           console.log('after res = ' + JSON.stringify(res));
           // this.planes$ = res.data;
           // console.log(' res = ' + res[0]['id']);
 
-            /*update successfully ac-layer using view child*/
+          /*update successfully ac-layer using view child*/
           /**update mock hard coded */
           // this.planes$ = Observable.from(this.dataArray);
           // this.layerRef.refreshAll(this.dataArray);
@@ -172,10 +175,9 @@ export class MapComponent implements OnInit {
   /******************************** */
 
   getSimplexJsonFromService() {
-    this.http.get('/assets/POI_wgs_dsm.geojson').subscribe(
+    this.http.get<Planes>('/assets/POI_wgs_dsm.geojson').subscribe(
       res => {
-
-         res.features.map(item => {
+        res.features.map(item => {
           item.geometry.coordinates = Cesium.Cartesian3.fromRadians(
             item.geometry.coordinates[0],
             item.geometry.coordinates[1],
@@ -185,7 +187,7 @@ export class MapComponent implements OnInit {
           // console.log('after item.properties.name = ' + item.properties.Name);
 
           /**translte to acNotification */
-          let itemNote = new AcNotification();
+          const itemNote = new AcNotification();
           itemNote.name = item.properties.Name;
           itemNote.position = item.geometry.coordinates;
           itemNote.actionType = ActionType.ADD_UPDATE;
@@ -194,8 +196,12 @@ export class MapComponent implements OnInit {
           return itemNote;
         });
         console.log('after convertedArr = ' + JSON.stringify(res.features));
-        console.log('after convertedArr[0].position = ' + res.features[0].position);
-        console.log('after  typeof(this.convertedArr[0]) = ' + typeof(this.convertedArr[0]));
+        console.log(
+          'after convertedArr[0].position = ' + res.features[0].position
+        );
+        console.log(
+          'after  typeof(this.convertedArr[0]) = ' + typeof this.convertedArr[0]
+        );
         /**update mock json */
         // this.layerRef.removeAll();
         // this.planes$ = Observable.from(this.dataArray);
