@@ -8,6 +8,7 @@ import {
   AcLayerComponent
 } from 'angular-cesium';
 import { Planes } from '../planes';
+import { GeoJsonFile } from '../geo-json-file';
 
 @Component({
   selector: 'app-map',
@@ -62,7 +63,7 @@ export class MapComponent implements OnInit {
   planeA: AcNotification = {
     id: '1',
     entity: {
-      name: 'first name',
+      name: 'שם ראשון',
       myField: 'just my field a',
       image: '/assets/smiley.jpg',
       position: Cesium.Cartesian3.fromRadians(
@@ -115,8 +116,8 @@ export class MapComponent implements OnInit {
     // this.isShown = true;
 
     // this.getData();
-    this.getJsonFromService();
-    // this.getSimplexJsonFromService();
+    // this.getJsonFromService();
+    this.getSimplexJsonFromService();
   }
 
   getData() {
@@ -175,9 +176,9 @@ export class MapComponent implements OnInit {
   /******************************** */
 
   getSimplexJsonFromService() {
-    this.http.get<Planes>('/assets/POI_wgs_dsm.geojson').subscribe(
+    this.http.get<GeoJsonFile>('/assets/POI_wgs_dsm.geojson').subscribe(
       res => {
-        res.features.map(item => {
+        this.convertedArr = res.features.map(item => {
           item.geometry.coordinates = Cesium.Cartesian3.fromRadians(
             item.geometry.coordinates[0],
             item.geometry.coordinates[1],
@@ -188,26 +189,25 @@ export class MapComponent implements OnInit {
 
           /**translte to acNotification */
           const itemNote = new AcNotification();
-          itemNote.name = item.properties.Name;
-          itemNote.position = item.geometry.coordinates;
+          itemNote.entity = new AcEntity({
+            name: item.properties.Name,
+            position : item.geometry.coordinates
+          });
           itemNote.actionType = ActionType.ADD_UPDATE;
           console.log('after itemNote = ' + JSON.stringify(itemNote));
-
           return itemNote;
         });
-        console.log('after convertedArr = ' + JSON.stringify(res.features));
-        console.log(
-          'after convertedArr[0].position = ' + res.features[0].position
-        );
-        console.log(
-          'after  typeof(this.convertedArr[0]) = ' + typeof this.convertedArr[0]
-        );
+        console.log('after convertedArr = ' + JSON.stringify(this.convertedArr));
+        // console.log(
+        //   'after convertedArr[0].position = ' + res.features[0].
+        // );
+        console.log('after  typeof(this.convertedArr[0]) = ' + this.convertedArr[0].entity.name);
         /**update mock json */
         // this.layerRef.removeAll();
         // this.planes$ = Observable.from(this.dataArray);
-        this.layerRef.refreshAll(res.features);
         /**update simplex json */
         // this.layerRef.removeAll();
+        this.layerRef.refreshAll(this.convertedArr);
         // this.layerRef.refreshAll(res.features);
       },
       err => {

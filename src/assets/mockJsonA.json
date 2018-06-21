@@ -3,7 +3,7 @@
   {
     "id": "11",
     "entity": {
-      "name": "this is json name",
+      "name": "שם בעברית לבדיקה מגייסון",
       "image": "/assets/smiley.jpg",
       "myField":
         "just my json field ",
