@@ -1,22 +1,22 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import {
   AcNotification,
   ActionType,
   AcEntity,
   AcLayerComponent
-} from "angular-cesium";
-import { Planes } from "../planes";
-import { GeoJsonFile } from "../geo-json-file";
+} from 'angular-cesium';
+import { Planes } from '../planes';
+import { GeoJsonFile } from '../geo-json-file';
 
 @Component({
-  selector: "app-map",
-  templateUrl: "./map.component.html",
-  styleUrls: ["./map.component.css"]
+  selector: 'app-map',
+  templateUrl: './map.component.html',
+  styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-  @ViewChild("layerRef") private layerRef: AcLayerComponent;
+  @ViewChild('layerRef') private layerRef: AcLayerComponent;
 
   public planes$: Observable<AcNotification>;
   colorBLue = Cesium.Color.LIGHTSKYBLUE;
@@ -26,33 +26,33 @@ export class MapComponent implements OnInit {
   // isShown = false;
   /****************************************** */
   tmpJson = {
-    type: "FeatureCollection",
+    type: 'FeatureCollection',
     features: [
       {
-        type: "Feature",
+        type: 'Feature',
         properties: {
-          OBJECTID_1: "1",
-          OBJECTID: "1",
-          Name: "הנדסה אזרחית וסביבתית",
-          Name_En: "Civil & Environmental Eng.",
-          ELEVATION: "219.261"
+          OBJECTID_1: '1',
+          OBJECTID: '1',
+          Name: 'הנדסה אזרחית וסביבתית',
+          Name_En: 'Civil & Environmental Eng.',
+          ELEVATION: '219.261'
         },
         geometry: {
-          type: "Point",
+          type: 'Point',
           coordinates: [35.022285, 32.779062, 218.789993]
         }
       },
       {
-        type: "Feature",
+        type: 'Feature',
         properties: {
-          OBJECTID_1: "2",
-          OBJECTID: "3",
-          Name: "בריכה חדר כושר ומגרשי ספור",
-          Name_En: "Sports Facility",
-          ELEVATION: "201.643"
+          OBJECTID_1: '2',
+          OBJECTID: '3',
+          Name: 'בריכה חדר כושר ומגרשי ספור',
+          Name_En: 'Sports Facility',
+          ELEVATION: '201.643'
         },
         geometry: {
-          type: "Point",
+          type: 'Point',
           coordinates: [35.019047, 32.779394, 201.643005]
         }
       }
@@ -61,7 +61,7 @@ export class MapComponent implements OnInit {
   /****************************************** */
 
   planeA: AcNotification = {
-    id: "1",
+    id: '1',
     entity: {
       name: 'שם ראשון',
       myField: 'just my field a',
@@ -128,9 +128,9 @@ export class MapComponent implements OnInit {
     console.log(' getData() res = ' + JSON.stringify(this.dataArray));
   }
 
-  getJsonFromService() {
-    this.http
-      .get<Planes>('/assets/mockJsonA.json')
+  // getJsonFromService() {
+  //   this.http
+  //     .get<Planes>('/assets/mockJsonA.json')
       // .map(item => {
       //   // item.actionType = ActionType.ADD_UPDATE;
       //   console.log(' item id = ' + JSON.stringify(item[0]));
@@ -139,42 +139,42 @@ export class MapComponent implements OnInit {
       //   // item.entity.position = Cesium.Cartesian3.fromRadians(item.entity.position);
       //   return item;
       // })
-      .subscribe(
-        res => {
-          console.log(' res = ' + JSON.stringify(res));
-          res.data.map(item => {
-            /**work using  item.entity.position in spite of the compiler warnings!!!
-             * no warnings on chrom browser
-             */
-            item.entity.position = Cesium.Cartesian3.fromRadians(
-              item.entity.position[0],
-              item.entity.position[1],
-              item.entity.position[2]
-            );
+  //     .subscribe(
+  //       res => {
+  //         console.log(' res = ' + JSON.stringify(res));
+  //         res.data.map(item => {
+  //           /**work using  item.entity.position in spite of the compiler warnings!!!
+  //            * no warnings on chrom browser
+  //            */
+  //           item.entity.position = Cesium.Cartesian3.fromRadians(
+  //             item.entity.position[0],
+  //             item.entity.position[1],
+  //             item.entity.position[2]
+  //           );
 
-            item.actionType = ActionType.ADD_UPDATE;
-            console.log(' res after = ' + JSON.stringify(res));
+  //           item.actionType = ActionType.ADD_UPDATE;
+  //           console.log(' res after = ' + JSON.stringify(res));
 
-            return item;
-          });
-          this.planes$ = Observable.from(this.dataArray);
-          console.log('after res = ' + JSON.stringify(res));
-          // this.planes$ = res.data;
-          // console.log(' res = ' + res[0]['id']);
+  //           return item;
+  //         });
+  //         this.planes$ = Observable.from(this.dataArray);
+  //         console.log('after res = ' + JSON.stringify(res));
+  //         // this.planes$ = res.data;
+  //         // console.log(' res = ' + res[0]['id']);
 
-          /*update successfully ac-layer using view child*/
-          /**update mock hard coded */
-          // this.planes$ = Observable.from(this.dataArray);
-          // this.layerRef.refreshAll(this.dataArray);
-          /**update mock json */
-          this.layerRef.removeAll();
-          this.layerRef.refreshAll(res.data);
-        },
-        err => {
-          console.log(' err = ' + err);
-        }
-      );
-  }
+  //         /*update successfully ac-layer using view child*/
+  //         /**update mock hard coded */
+  //         // this.planes$ = Observable.from(this.dataArray);
+  //         // this.layerRef.refreshAll(this.dataArray);
+  //         /**update mock json */
+  //         this.layerRef.removeAll();
+  //         this.layerRef.refreshAll(res.data);
+  //       },
+  //       err => {
+  //         console.log(' err = ' + err);
+  //       }
+  //     );
+  // }
   /******************************** */
 
   getSimplexJsonFromService() {
@@ -207,23 +207,23 @@ export class MapComponent implements OnInit {
         // console.log(
         //   'after convertedArr[0].position = ' + res.features[0].
         // );
-        console.log(
-          'after  this.convertedArr[0].entity.name = ' +
-            this.convertedArr[0].entity.name
-        );
-        console.log(
-          'after  this.convertedArr[0] = ' +
-            JSON.stringify(this.convertedArr[0])
-        );
-        console.log(
-          'after  this.convertedArr = ' + JSON.stringify(this.convertedArr)
-        );
-        console.log(
-          'jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj'
-        );
-        console.log(
-          'after  this.dataArray = ' + JSON.stringify(this.dataArray)
-        );
+        // console.log(
+        //   'after  this.convertedArr[0].entity.name = ' +
+        //     this.convertedArr[0].entity.name
+        // );
+        // console.log(
+        //   'after  this.convertedArr[0] = ' +
+        //     JSON.stringify(this.convertedArr[0])
+        // );
+        // console.log(
+        //   'after  this.convertedArr = ' + JSON.stringify(this.convertedArr)
+        // );
+        // console.log(
+        //   'jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj'
+        // );
+        // console.log(
+        //   'after  this.dataArray = ' + JSON.stringify(this.dataArray)
+        // );
 
         /**update mock json */
         // this.layerRef.removeAll();
