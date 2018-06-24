@@ -22,8 +22,15 @@ export class MapComponent implements OnInit {
   colorBLue = Cesium.Color.LIGHTSKYBLUE;
   colorGreen = Cesium.Color.GREEN;
   convertedArr: AcNotification[];
+  mainMap = 'main-map';
+  flyingVarStart = {
+    destination: Cesium.Cartesian3.fromDegrees(35.024606, 32.778186, 166.468002)
+  };
+  flyingVarOnClick = {
+    destination: Cesium.Cartesian3.fromDegrees(35.024606, 32.778186, 166.468002)
+  };
 
-  // isShown = false;
+  isShown = true;
   /****************************************** */
   tmpJson = {
     type: 'FeatureCollection',
@@ -242,5 +249,13 @@ export class MapComponent implements OnInit {
 
   reverseString(str: string) {
     return str.split('').reverse().join('');
+  }
+  toggleShown() {
+    this.isShown = !this.isShown;
+  }
+  flyToDest() {
+    this.flyingVarStart = {
+      destination: Cesium.Cartesian3.fromDegrees(35.020244, 32.781349, 170.354996)
+    };
   }
 }
