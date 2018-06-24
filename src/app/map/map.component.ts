@@ -255,7 +255,7 @@ export class MapComponent implements OnInit {
   }
   flyToDest() {
     this.flyingVarStart = {
-      destination: Cesium.Cartesian3.fromDegrees(35.020244, 32.781349, 170.354996)
+      destination: Cesium.Cartesian3.fromDegrees(35.022789, 32.776448, 214.421997)
     };
   }
 }
