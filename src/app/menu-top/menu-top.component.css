@@ -1,0 +1,31 @@
+:host /deep/ .ui-menuitem {
+  background-color: black;
+  border-right: 0.5px solid red;
+  border-bottom: 0.5px solid red;
+}
+/*
+:host /deep/ .ui-menuitem :hover{
+  color: rgb(45, 45, 228);
+
+} */
+
+:hover {
+  color: green;
+
+}
+:host /deep/ .ui-menuitem-text ,:host /deep/ .ui-menuitem-icon{
+  color: white;
+}
+
+:host /deep/ .menubar{
+  width: 100%;
+  border: 0.5px solid red;
+  background: black ;
+  padding: 0;
+
+}
+
+/* :host /deep/ .ui-menubar ,:host /deep/ .ui-widget, :host /deep/ .ui-widget-content, :host /deep/ .ui-corner-all {
+  background-color: black;
+
+} */

@@ -5,10 +5,13 @@ import {
   AcNotification,
   ActionType,
   AcEntity,
-  AcLayerComponent
+  AcLayerComponent,
+  SceneMode,
+  MapLayerProviderOptions
 } from 'angular-cesium';
 import { Planes } from '../planes';
 import { GeoJsonFile } from '../geo-json-file';
+
 
 @Component({
   selector: 'app-map',
@@ -21,6 +24,7 @@ export class MapComponent implements OnInit {
   public planes$: Observable<AcNotification>;
   colorBLue = Cesium.Color.LIGHTSKYBLUE;
   colorGreen = Cesium.Color.GREEN;
+  arcGisMapServerProvider = MapLayerProviderOptions.ArcGisMapServer;
   convertedArr: AcNotification[];
   mainMap = 'main-map';
   flyingVarStart = {
@@ -31,6 +35,7 @@ export class MapComponent implements OnInit {
   };
 
   isShown = true;
+  sceneMode = SceneMode.SCENE3D;
   /****************************************** */
   tmpJson = {
     type: 'FeatureCollection',

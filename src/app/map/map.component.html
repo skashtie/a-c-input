@@ -17,10 +17,10 @@
 </ac-map> -->
 <!-- {{tmpVar}} -->
 
-<ac-map [flyTo]="flyingVarStart">
+<ac-map [flyTo]="flyingVarStart" [sceneMode]="sceneMode">
   <!-- <ac-map [flyTo]= "flyingVar"> -->
   <ac-layer #layerRef acFor="let plane of planes$" [show]=isShown [context]="this">
-    <ac-toolbar [allowDrag]="true">
+    <ac-toolbar [allowDrag]="false">
       <ac-toolbar-button [iconUrl]="'assets/technion.png'" (onClick)="toggleShown()">
       </ac-toolbar-button>
       <ac-toolbar-button [iconUrl]="'assets/su.jpg'" (onClick)="flyToDest()">
@@ -34,10 +34,33 @@
     <ac-label-desc props="{
          position: plane.position,
          text: plane.name,
-         font:'40px Comic Sans MS',
               outlineColor: colorBLue,
               fillColor: colorGreen
       }">
     </ac-label-desc>
   </ac-layer>
+  <!-- font:'40px Comic Sans MS', -->
+
+  <ac-3d-tile-layer
+  [options]="{
+    url: '\assets\tech_2018_cessium.json'
+  }"
+>
+</ac-3d-tile-layer>
+<ac-map-layer-provider *ngIf="true" [provider]="arcGisMapServerProvider"
+[options]="{
+     url : 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer'
+ }">
+ <!-- //services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer -->
+ <!-- url : 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer' -->
+
+</ac-map-layer-provider>
+  <!-- <ac-3d-tile-layer
+  [options]="{
+    url: 'https://beta.cesium.com/api/assets/1461?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkYWJmM2MzNS02OWM5LTQ3OWItYjEyYS0xZmNlODM5ZDNkMTYiLCJpZCI6NDQsImFzc2V0cyI6WzE0NjFdLCJpYXQiOjE0OTkyNjQ3NDN9.vuR75SqPDKcggvUrG_vpx0Av02jdiAxnnB1fNf-9f7s'
+  }"
+  [style]="{
+      color: 'mix(color(\'white\'), color(\'lightgreen\'), min(${area} / 10000.0, 1.0))'
+  }">
+</ac-3d-tile-layer> -->
 </ac-map>
